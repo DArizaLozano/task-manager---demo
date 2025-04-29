@@ -1,0 +1,343 @@
+/* Estilos generales para el Dashboard */
+.dashboard-container {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+  font-family: 'Arial', sans-serif;
+  padding: 40px 60px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-top: 30%;
+  animation: fadeIn 0.8s ease;
+  padding-top: 90%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #e3e3e3;
+  word-wrap: break-word;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.action-btn {
+  background-color: #3e8e41;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 220px;
+  margin: 20px auto 40px auto;
+}
+
+.action-btn:hover {
+  background-color: #2c6a2f;
+  transform: translateY(-3px);
+}
+
+.tasks-list {
+  background-color: #282828;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background-color: #333;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.4s;
+  animation: fadeIn 0.5s ease;
+}
+
+.task-item:hover {
+  background-color: #444;
+  transform: translateY(-5px);
+}
+
+.task-item.removing {
+  animation: fadeOut 0.5s forwards;
+}
+
+.task-info {
+  flex-grow: 1;
+  font-size: 1.1rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-actions button {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-actions button:hover {
+  background-color: #e74c3c;
+  transform: translateY(-3px);
+}
+
+.task-actions .edit-btn {
+  background-color: #f39c12;
+}
+
+.task-actions .edit-btn:hover {
+  background-color: #f1c40f;
+}
+
+.task-actions .edit-btn:active {
+  transform: scale(0.95);
+}
+
+button.complete-btn {
+  background-color: #3e8e41;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button.complete-btn:hover {
+  background-color: #2c6a2f;
+  transform: scale(1.05);
+}
+
+button.complete-btn:active {
+  background-color: #2a5731;
+  transform: scale(0.98);
+}
+
+.completed {
+  background-color: #2e2e2e;
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: background-color 0.5s, opacity 0.5s;
+}
+
+.completed .task-actions {
+  display: none;
+}
+
+/* Calendario */
+.calendar-container {
+  width: 300px;
+  background-color: #282828;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.calendar-row {
+  display: flex;
+}
+
+.calendar-day,
+.calendar-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #444;
+  border-radius: 6px;
+  margin: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar-cell:hover {
+  background-color: #555;
+}
+
+.task-day {
+  background-color: #f39c12;
+}
+
+.task-day:hover {
+  background-color: #e67e22;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: scale(0.8); }
+}
+
+/* 🌞 Light Theme */
+body.light-theme .dashboard-container {
+  background-color: #f4f4f4;
+  color: #1a1a1a;
+}
+
+body.light-theme .tasks-list {
+  background-color: #ffffff;
+}
+
+body.light-theme .task-item {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.light-theme .calendar-container {
+  background-color: #ffffff;
+}
+
+body.light-theme .calendar-day,
+body.light-theme .calendar-cell {
+  background-color: #dddddd;
+  color: #333;
+}
+
+body.light-theme .task-day {
+  background-color: #ffb347;
+}
+
+body.light-theme .action-btn {
+  background-color: #4CAF50;
+}
+
+body.light-theme .action-btn:hover {
+  background-color: #388e3c;
+}
+
+body.light-theme .task-actions .delete-btn {
+  background-color: #ff5722;
+}
+
+body.light-theme .task-actions .edit-btn {
+  background-color: #ffc107;
+}
+
+body.light-theme .task-actions button:hover {
+  filter: brightness(1.1);
+}
+
+/* Animaciones extra */
+.task-item.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.task-item.completed {
+  animation: taskCompleteEffect 0.5s ease forwards;
+}
+
+@keyframes taskCompleteEffect {
+  0% { background-color: #3e8e41; transform: scale(1); }
+  100% { background-color: #2e2e2e; transform: scale(1.02); }
+}
+
+/* Drag */
+.task-item.dragging {
+  opacity: 0.5;
+  transform: rotate(2deg);
+}
+
+.tasks-list.drag-over {
+  background-color: #3a3a3a;
+  transition: background-color 0.3s ease;
+}
+
+body.light-theme .tasks-list.drag-over {
+  background-color: #e0e0e0;
+}
+
+body.light-theme .task-item.completed {
+  animation: taskCompleteEffectLight 0.5s ease forwards;
+}
+
+@keyframes taskCompleteEffectLight {
+  0% { background-color: #4CAF50; transform: scale(1); }
+  100% { background-color: #f9f9f9; transform: scale(1.02); }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 5%;
+    flex-direction: column;
+    min-height: auto;
+    overflow-y: auto;
+    gap: 20px;
+    padding-top: 300%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .calendar-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .tasks-list {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .action-btn {
+    width: 90%;
+    padding: 12px 20px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .calendar-day, .calendar-cell {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,134 @@
+/* Sidebar base oscuro */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(145deg, #1f1c2c, #928dab);
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  position: relative;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 15px 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px 0 0 10px;
+  transition: all 0.4s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 35px;
+}
+
+/* Toggle */
+.sidebar-toggle-checkbox {
+  display: none;
+}
+
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+  color: #fff;
+  background: #1a1a2e;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease, transform 0.4s ease;
+  transform: rotate(0deg);
+}
+
+/* Animación de apertura del botón hamburguesa */
+.sidebar-toggle-btn.open {
+  background: #4CAF50;
+  transform: rotate(90deg) scale(1.1);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    transform: translateX(-100%);
+    background: linear-gradient(135deg, #16213e, #0f3460);
+    transition: transform 0.4s ease-in-out, background 0.4s;
+  }
+
+  .sidebar-toggle-checkbox:checked ~ .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-toggle-btn {
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+/* Animación */
+.sidebar-link {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLinks 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInLinks {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-link:hover {
+  box-shadow: inset 5px 0 0 #ffffff;
+}
+
+/* ---------------- MODO CLARO aplicado ---------------- */
+.light-theme .sidebar {
+  background: linear-gradient(145deg, #ebe1e1, #f0f0f0);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .sidebar-link {
+  color: #333;
+}
+
+.light-theme .sidebar-link:hover {
+  background: rgba(0, 0, 0, 0.05);
+  padding-left: 35px;
+  box-shadow: inset 5px 0 0 #333;
+}
+
+.light-theme .sidebar-toggle-btn {
+  background: #ccc;
+  color: #333;
+}
+
+.light-theme .sidebar-toggle-btn.open {
+  background: #66bb6a;
+  color: white;
+}

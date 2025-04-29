@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Task Manager</title>
+  <link rel ="icon" href="assets/img/favicon.png" type="image/png>"
+
+  <!-- Enlace al archivo de estilos globales -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Enlace a los estilos específicos de las vistas (opcional en este caso) -->
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/signup.css">
+  <link rel="stylesheet" href="assets/css/tasks.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/configuracion.css">
+
+
+
+  <!-- Aquí podrían ir más estilos si los dividimos más detalladamente -->
+</head>
+
+<body>
+  <!-- Contenedor principal -->
+  <div id="app">
+    <!-- Barra de navegación -->
+    <div id="navbar-container"></div>
+
+    <!-- Sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenedor de la vista principal (donde se cambiarán las vistas dinámicamente) -->
+    <div id="main-content">
+      <!-- Aquí se cargarán las vistas dinámicamente mediante JS -->
+    </div>
+  </div>
+
+  <!-- Scripts de la aplicación -->
+  <script src="js/app.js"></script>
+  <script type="module" src="js/router.js"></script>
+
+
+  <!-- Componentes -->
+  <script src="components/navbar.js"></script>
+  <script type="module" src="components/sidebar.js"></script>
+
+  <!-- Funciones de tareas -->
+  <script type="module" src="js/views/tasks.js"></script>
+
+  <!-- Funciones de autenticación -->
+  <script src="js/auth.js"></script>
+
+  <!-- Scripts de las vistas -->
+  <script type="module" src="js/views/dashboard.js"></script>
+  <script type="module" src="js/views/login.js"></script>
+  <script type="module" src="js/views/signup.js"></script>
+  <script type="module" src="js/views/configuracion.js"></script>
+  <script type="module" src="js/views/tasks.js"></script>
+
+  <!-- Script de la página no encontrada -->
+
+</body>
+
+</html>

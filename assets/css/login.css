@@ -1,0 +1,146 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Estilo de la caja de login */
+  .login-container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  form div {
+    margin-bottom: 1.2rem;
+  }
+  
+  form label {
+    font-size: 1rem;
+    color: #b3b3b3;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s ease-in-out;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: #3d89f5;
+    background-color: #444;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #3d89f5;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4c99f1;
+  }
+  
+  /* Enlace a registrarse */
+  p {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  a {
+    color: #3d89f5;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animación para mostrar el login */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .login-container {
+      padding: 1.5rem;
+      max-width: 100%;
+      margin: auto;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    form input, button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    form input, button {
+      font-size: 0.85rem;
+    }
+  
+    .login-container {
+      width: 90%;
+      padding: 1.2rem;
+    }
+  }
+  

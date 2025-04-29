@@ -1,0 +1,191 @@
+/* Estilos generales para la vista Home */
+.home-container {
+    background-color: #1d1d1d;
+    color: #f1f1f1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+  
+  .home-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .home-summary {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .summary-card {
+    background-color: #282828;
+    padding: 30px 20px;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    text-align: center;
+    min-width: 250px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .summary-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .summary-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .summary-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+  .home-next-task,
+  .home-activity-log {
+    background-color: #282828;
+    padding: 30px 25px;
+    border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .home-next-task h3,
+  .home-activity-log h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .home-next-task p {
+    font-size: 1.2rem;
+  }
+  
+  .home-activity-log ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .home-activity-log li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  .home-add-task {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #add-task-btn {
+    background-color: #3e8e41;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #2c6a2f;
+    transform: translateY(-3px);
+  }
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 20px 10px;
+      align-items: stretch;
+      gap: 25px;
+      padding-top: 220%;
+    }
+  
+    .home-container h2 {
+      font-size: 2rem;
+      margin-bottom: 100px;
+    }
+  
+    .home-summary {
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+  
+    .summary-card {
+      width: 100%;
+      max-width: 100%;
+      padding: 25px;
+    }
+  
+    .home-next-task,
+    .home-activity-log {
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .home-next-task h3,
+    .home-activity-log h3 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+  
+    .home-activity-log li {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  
+    #add-task-btn {
+      width: 90%;
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
+  /* Estilos modo claro */
+  .light-theme .home-container {
+    background-color: #f5f5f5;
+    color: #222;
+  }
+  
+  .light-theme .summary-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light-theme .home-next-task,
+  .light-theme .home-activity-log {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light-theme .home-activity-log li {
+    background-color: #eeeeee;
+  }
+  
+  .light-theme #add-task-btn {
+    background-color: #2196f3;
+  }
+  
+  .light-theme #add-task-btn:hover {
+    background-color: #1976d2;
+  }
+  
